@@ -1,0 +1,9 @@
+apiVersion: pool.w-h-a.io/v1alpha1
+kind: Reserve
+metadata:
+  labels:
+    app.kubernetes.io/name: reserve
+    app.kubernetes.io/managed-by: kustomize
+  name: reserve-sample
+spec:
+  # TODO(user): Add fields here
