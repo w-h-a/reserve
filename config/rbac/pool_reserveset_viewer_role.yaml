@@ -1,0 +1,23 @@
+# permissions for end users to view reservesets.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: reserve
+    app.kubernetes.io/managed-by: kustomize
+  name: pool-reserveset-viewer-role
+rules:
+- apiGroups:
+  - pool.w-h-a.io
+  resources:
+  - reservesets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - pool.w-h-a.io
+  resources:
+  - reservesets/status
+  verbs:
+  - get
